@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Get Code Dump</title>
+  <meta name="description" content="Collecton of huge amount of sample program for wide range of Programming languages">
+  <meta name="keywords" content="C, C++, Java, Python, Shell, PHP, C#, HTML,CSS,XML,JavaScript">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121314542-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121314542-1');
+      </script>
+
+      <link rel="shortcut icon" href="/logo-top.png" type="image/x-icon" />
+      <link rel="stylesheet" type="text/css" href="/CPrograms/CCodePage.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid" id="headerSection">
+            <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+            <script type="text/javascript">
+               $(document).ready(function(){
+                   $('#headerSection').load('/in-headerSection.html');
+               });
+            </script>  
+         </div>
+      </nav>
+      <div class="container-fluid">
+         <div class="row content" id=rowContent>
+            <div class="col-sm-2 sidenav" id = "ccodeListLeftColumn">
+               <p class="lead" align="center"> C Program List </p>
+               <div id="codeListLeftColumn">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#codeListLeftColumn').load('/CPrograms/in-programList.html #justProgramList');
+                  });
+               </script>  
+            </div>
+            </div>
+            <div class="col-sm-8" id = codeSection>
+               <div >
+                  <p style="word-wrap: break-word;" id="description">
+<p id="codeHeading">C Program to Calculate Difference Between Two Time Periods.
+
+</p>
+<div><p id="codeDescription">In this example, you'll learn to calculate the difference between two time periods using user defined - differenceBetweenTimePeriod function.
+
+</p></div>
+</br><pre id="code">#include &lt;stdio.h&gt;
+struct TIME
+{
+  int seconds;
+  int minutes;
+  int hours;
+};
+void differenceBetweenTimePeriod(struct TIME t1, struct TIME t2, struct TIME *diff);
+
+int main()
+{
+    struct TIME startTime, stopTime, diff;
+
+    printf(&quot;Enter start time: n&quot;);
+    printf(&quot;Enter hours, minutes and seconds respectively: &quot;);
+    scanf(&quot;%d %d %d&quot;, &amp;startTime.hours, &amp;startTime.minutes, &amp;startTime.seconds);
+
+    printf(&quot;Enter stop time: n&quot;);
+    printf(&quot;Enter hours, minutes and seconds respectively: &quot;);
+    scanf(&quot;%d %d %d&quot;, &amp;stopTime.hours, &amp;stopTime.minutes, &amp;stopTime.seconds);
+
+    // Calculate the difference between the start and stop time period.
+    differenceBetweenTimePeriod(startTime, stopTime, &amp;diff);
+
+    printf(&quot;nTIME DIFFERENCE: %d:%d:%d - &quot;, startTime.hours, startTime.minutes, startTime.seconds);
+    printf(&quot;%d:%d:%d &quot;, stopTime.hours, stopTime.minutes, stopTime.seconds);
+    printf(&quot;= %d:%d:%dn&quot;, diff.hours, diff.minutes, diff.seconds);
+
+    return 0;
+}
+
+void differenceBetweenTimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
+{
+    if(stop.seconds &gt; start.seconds){
+        --start.minutes;
+        start.seconds += 60;
+    }
+
+    diff-&gt;seconds = start.seconds - stop.seconds;
+    if(stop.minutes &gt; start.minutes){
+        --start.hours;
+        start.minutes += 60;
+    }
+
+    diff-&gt;minutes = start.minutes - stop.minutes;
+    diff-&gt;hours = start.hours - stop.hours;
+}
+
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">Enter start time:
+Enter hours, minutes and seconds respectively: 12
+34
+55
+Enter stop time:
+Enter hours, minutes and seconds respectively:8
+12
+15
+
+TIME DIFFERENCE: 12:34:55 - 8:12:15 = 4:22:40
+</pre></br>
+                  </p>
+               </div>
+               <hr>
+            </div>
+            <div class="col-sm-2 sidenav" id="rightColumn" style="overflow-y: scroll; height: calc(90vh - 15px);">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#rightColumn').load('/in-rightColumn.html');
+                  });
+               </script>  
+            </div>
+         </div>
+      </div>
+      <footer class="container-fluid text-center" id="footerSection">
+         <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+         <script type="text/javascript">
+            $(document).ready(function(){
+                $('#footerSection').load('/in-footerSection.html');
+            });
+         </script> 
+      </footer>
+   </body>
+</html>

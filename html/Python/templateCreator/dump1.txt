@@ -1,0 +1,551 @@
+Python Program to Calculate the Average of Numbers in a Given List
+
+
+This is a Python Program to Calculate the Average of Numbers in a Given List.
+
+
+n=int(input(&quot;Enter the number of elements to be inserted: &quot;))
+a=[]
+for i in range(0,n):
+    elem=int(input(&quot;Enter element: &quot;))
+    a.append(elem)
+avg=sum(a)/n
+print(&quot;Average of elements in the list&quot;,round(avg,2))
+
+
+Enter the number of elements to be inserted: 3
+Enter element: 23
+Enter element: 45
+Enter element: 56
+Average of elements in the list 41.33
+
+
+---------------------------------------------------------------------------------------
+Python Program to Exchange the Values of Two Numbers Without Using a Temporary Variable
+
+
+This is a Python Program to exchange the values of two numbers without using a temporary variable.
+
+
+a=int(input(&quot;Enter value of first variable: &quot;))
+b=int(input(&quot;Enter value of second variable: &quot;))
+a=a+b
+b=a-b
+a=a-b
+print(&quot;a is:&quot;,a,&quot; b is:&quot;,b)
+
+Enter value of first variable: 3
+Enter value of second variable: 5
+a is: 5  b is: 3
+
+
+---------------------------------------------------------------------------------------
+Python Program to Read a Mumber n and Compute n+nn+nnn
+
+
+This is a Python Program to read a number n and compute n+nn+nnn.
+
+
+
+n=int(input(&quot;Enter a number n: &quot;))
+temp=str(n)
+t1=temp+temp
+t2=temp+temp+temp
+comp=n+int(t1)+int(t2)
+print(&quot;The value is:&quot;,comp)
+
+
+Enter a number n: 20
+The value is: 204060
+
+
+---------------------------------------------------------------------------------------
+Python Program to Reverse a Given Number
+
+This is a Python Program to reverse a given number.
+
+
+
+n=int(input(&quot;Enter number: &quot;))
+rev=0
+while(n&gt;0):
+    dig=n
+    rev=rev*10+dig
+    n=n//10
+print(&quot;Reverse of the number:&quot;,rev)
+
+
+Case 1:
+Enter number: 124
+Reverse of the number: 421
+ 
+Case 2:
+Enter number: 4538
+Reverse of the number: 8354
+
+
+
+---------------------------------------------------------------------------------------
+Python Program to Check Whether a Number is Positive or Negative
+
+ 
+n=int(input(&quot;Enter number: &quot;))
+if(n&gt;0):
+    print(&quot;Number is positive&quot;)
+else:
+    print(&quot;Number is negative&quot;)
+
+Enter number: 45
+Number is positive
+
+---------------------------------------------------------------------------------------
+Python Program to Check if a Date is Valid and Print the Incremented Date if it is
+
+This is a Python Program to check if a date is valid and print the incremented date if it is.
+
+date=input(&quot;Enter the date: &quot;)
+dd,mm,yy=date.split('/')
+dd=int(dd)
+mm=int(mm)
+yy=int(yy)
+if(mm==1 or mm==3 or mm==5 or mm==7 or mm==8 or mm==10 or mm==12):
+    max1=31
+elif(mm==4 or mm==6 or mm==9 or mm==11):
+    max1=30
+elif(yy%4==0 and yy0!=0 or yy@0==0):
+    max1=29
+else:
+    max1=28
+if(mm&lt;1 or mm&gt;12):
+    print(&quot;Date is invalid.&quot;)
+elif(dd&lt;1 or dd&gt;max1):
+    print(&quot;Date is invalid.&quot;)
+elif(dd==max1 and mm!=12):
+    dd=1
+    mm=mm+1
+    print(&quot;The incremented date is: &quot;,dd,mm,yy)
+elif(dd==31 and mm==12):
+    dd=1
+    mm=1
+    yy=yy+1
+    print(&quot;The incremented date is: &quot;,dd,mm,yy)
+else:
+    dd=dd+1
+    print(&quot;The incremented date is: &quot;,dd,mm,yy)
+
+
+Enter the date: 5/7/2016
+The incremented date is:  6 7 2016
+
+---------------------------------------------------------------------------------------
+Python Program to Compute Simple Interest Given all the Required Values
+
+
+This is a Python Program to compute simple interest given all the required values.
+
+
+principle=float(input(&quot;Enter the principle amount:&quot;))
+time=int(input(&quot;Enter the time(years):&quot;))
+rate=float(input(&quot;Enter the rate:&quot;))
+simple_interest=(principle*time*rate)/100
+print(&quot;The simple interest is:&quot;,simple_interest)
+
+
+Enter the principle amount:200
+Enter the time(years):5
+Enter the rate:5.0
+The simple interest is: 50.0
+
+---------------------------------------------------------------------------------------
+Python Program to Check Whether a Given Year is a Leap Year
+
+
+This is a Python Program to check whether a given year is a leap year or not.
+
+
+year=int(input(&quot;Enter year to be checked:&quot;))
+if(year%4==0 and year0!=0 or year@0==0):
+    print(&quot;The year is a leap year!)
+else:
+    print(&quot;The year isn't a leap year!)
+
+
+Case 1:
+Enter year to be checked:2016
+The year is a leap year!
+ 
+ 
+Case 2:
+Enter year to be checked:2005
+The year isn't a leap year!
+
+
+---------------------------------------------------------------------------------------
+Python Program to Read Height in Centimeters and then Convert the Height to Feet and Inches
+
+This is a Python Program to read height in centimeters and then convert the height to feet and inches
+
+
+cm=int(input(&quot;Enter the height in centimeters:&quot;))
+inches=0.394*cm
+feet=0.0328*cm
+print(&quot;The length in inches&quot;,round(inches,2))
+print(&quot;The length in feet&quot;,round(feet,2))
+
+Enter the height in centimeters:153
+The length in inches 60.28
+The length in feet 5.02
+
+---------------------------------------------------------------------------------------
+Python Program to Take the Temperature in Celcius and Covert it to Farenheit
+
+This is a Python Program to take the temperature in Celsius and convert it to Fahrenheit.
+
+
+celsius=int(input(&quot;Enter the temperature in celcius:&quot;))
+f=(celsius*1.8)+32
+print(&quot;Temperature in farenheit is:&quot;,f)
+
+Enter the temperature in celcius:48
+Temperature in Fahrenheit is: 118.4
+
+
+---------------------------------------------------------------------------------------
+Python Program to Find the Largest Number in a List
+
+Python Program to Find the Largest Number in a List
+
+a=[]
+n=int(input(&quot;Enter number of elements:&quot;))
+for i in range(1,n+1):
+    b=int(input(&quot;Enter element:&quot;))
+    a.append(b)
+a.sort()
+print(&quot;Largest element is:&quot;,a[n-1])
+
+Enter number of elements:3
+Enter element:23
+Enter element:567
+Enter element:3
+Largest element is: 567
+
+
+---------------------------------------------------------------------------------------
+Python Program to Find the Second Largest Number in a List
+
+
+This is a Python Program to find the second largest number in a list.
+
+
+a=[]
+n=int(input(&quot;Enter number of elements:&quot;))
+for i in range(1,n+1):
+    b=int(input(&quot;Enter element:&quot;))
+    a.append(b)
+a.sort()
+print(&quot;Second largest element is:&quot;,a[n-2])
+
+Enter number of elements:4
+Enter element:23
+Enter element:56
+Enter element:39
+Enter element:11
+Second largest element is: 39
+
+
+---------------------------------------------------------------------------------------
+Python Program to Put Even and Odd elements in a List into Two Different Lists
+
+
+This is a Python Program to put the even and odd elements in a list into two different lists.
+
+
+a=[]
+n=int(input(&quot;Enter number of elements:&quot;))
+for i in range(1,n+1):
+    b=int(input(&quot;Enter element:&quot;))
+    a.append(b)
+even=[]
+odd=[]
+for j in a:
+    if(j%2==0):
+        even.append(j)
+    else:
+        odd.append(j)
+print(&quot;The even list&quot;,even)
+print(&quot;The odd list&quot;,odd)
+
+
+Enter number of elements:5
+Enter element:67
+Enter element:43
+Enter element:44
+Enter element:22
+Enter element:455
+The even list [44, 22]
+The odd list [67, 43, 455]
+---------------------------------------------------------------------------------------
+Python Program to Merge Two Lists and Sort it
+
+
+This is a Python Program to merge two lists and sort it.
+
+
+a=[]
+c=[]
+n1=int(input(&quot;Enter number of elements:&quot;))
+for i in range(1,n1+1):
+    b=int(input(&quot;Enter element:&quot;))
+    a.append(b)
+n2=int(input(&quot;Enter number of elements:&quot;))
+for i in range(1,n2+1):
+    d=int(input(&quot;Enter element:&quot;))
+    c.append(d)
+new=a+c
+new.sort()
+print(&quot;Sorted list is:&quot;,new)
+
+
+Enter number of elements:4
+Enter element:56
+Enter element:43
+Enter element:78
+Enter element:12
+('Second largest number is:', 56)
+
+
+---------------------------------------------------------------------------------------
+Python Program to Sort the List According to the Second Element in Sublist
+
+This is a Python Program to sort the list according to the second element in the sublist.
+
+
+
+a=[['A',34],['B',21],['C',26]]
+for i in range(0,len(a)):
+    for j in range(0,len(a)-i-1):
+        if(a[j][1]&gt;a[j+1][1]):
+            temp=a[j]
+            a[j]=a[j+1]
+            a[j+1]=temp
+ 
+print(a)
+
+[['B', 21], ['C', 26], ['A', 34]]
+
+
+---------------------------------------------------------------------------------------
+Python Program to Replace all Occurrences of &lsquo;a&rsquo; with $ in a String
+
+This is a Python Program to replace all occurrences of &lsquo;a&rsquo; with &lsquo;$&rsquo; in a string.
+
+string=raw_input(&quot;Enter string:&quot;)
+string=string.replace('a','$')
+string=string.replace('A','$')
+print(&quot;Modified string:&quot;)
+print(string)
+
+
+Enter string:Apple
+Modified string:
+$pple
+
+---------------------------------------------------------------------------------------
+Python Program to Remove the nth Index Character from a Non-Empty String
+
+
+This is a Python Program to remove the nth index character from a non-empty string.
+
+
+def remove(string, n):  
+      first = string[:n]   
+      last = string[n+1:]  
+      return first + last
+string=raw_input(&quot;Enter the sring:&quot;)
+n=int(input(&quot;Enter the index of the character to remove:&quot;))
+print(&quot;Modified string:&quot;)
+print(remove(string, n))
+
+Enter the sring:Checking
+Enter the index of the character to remove:4
+Modified string:
+Checing
+
+
+---------------------------------------------------------------------------------------
+Python Program to Detect if Two Strings are Anagrams
+
+
+This is a Python Program to detect if two strings are anagrams.
+
+
+
+s1=raw_input(&quot;Enter first string:&quot;)
+s2=raw_input(&quot;Enter second string:&quot;)
+if(sorted(s1)==sorted(s2)):
+      print(&quot;The strings are anagrams.&quot;)
+else:
+      print(&quot;The strings aren't anagrams.&quot;)
+
+
+Case 1:
+Enter first string:anagram
+Enter second string:nagaram
+The strings are anagrams.
+ 
+Case 2:
+Enter first string:hello
+Enter second string:world
+The strings aren't anagrams.
+
+
+---------------------------------------------------------------------------------------
+Python Program to Form a New String where the First Character and the Last Character have been Exchanged
+
+
+This is a Python Program to form a string where the first character and the last character have been exchanged.
+
+
+def change(string):
+      return string[-1:] + string[1:-1] + string[:1]
+string=raw_input(&quot;Enter string:&quot;)
+print(&quot;Modified string:&quot;)
+print(change(string))
+
+
+ 
+Case 1:
+Enter string:abcd
+Modified string:
+dbca
+ 
+Case 2:
+Enter string:hello world
+Modified string:
+dello worlh
+
+
+---------------------------------------------------------------------------------------
+Python Program to Count the Number of Vowels in a String
+
+
+This is a Python Program to count the number of vowels in a string.
+
+
+string=raw_input(&quot;Enter string:&quot;)
+vowels=0
+for i in string:
+      if(i=='a' or i=='e' or i=='i' or i=='o' or i=='u' or i=='A' or i=='E' or i=='I' or i=='O' or i=='U'):
+            vowels=vowels+1
+print(&quot;Number of vowels are:&quot;)
+print(vowels)
+
+
+Enter string:WELCOME
+Number of vowels are:
+3
+
+
+---------------------------------------------------------------------------------------
+
+Python Program to Add a Key-Value Pair to the Dictionary
+
+
+This is a Python Program to add a key-value pair to a dictionary.
+
+
+
+key=int(input(&quot;Enter the key (int) to be added:&quot;))
+value=int(input(&quot;Enter the value for the key to be added:&quot;))
+d={}
+d.update({key:value})
+print(&quot;Updated dictionary is:&quot;)
+print(d)
+
+
+Enter the key (int) to be added:34
+Enter the value for the key to be added:29
+Updated dictionary is:
+{34: 29}
+
+
+---------------------------------------------------------------------------------------
+Python Program to Concatenate Two Dictionaries Into One
+
+
+This is a Python Program to concatenate two dictionaries into one dictionary.
+
+
+
+d1={'A':1,'B':2}
+d2={'C':3}
+d1.update(d2)
+print(&quot;Concatenated dictionary is:&quot;)
+print(d1)
+
+
+Concatenated dictionary is:
+{'A': 1, 'C': 3, 'B': 2}
+
+
+---------------------------------------------------------------------------------------
+
+Python Program to Check if a Given Key Exists in a Dictionary or Not
+
+
+This is a Python Program to check if a given key exists in a dictionary or not.
+
+
+d={'A':1,'B':2,'C':3}
+key=raw_input(&quot;Enter key to check:&quot;)
+if key in d.keys():
+      print(&quot;Key is present and value of the key is:&quot;)
+      print(d[key])
+else:
+      print(&quot;Key isn't present!&quot;)
+
+
+Enter key to check:A
+Key is present and value of the key is:
+1
+
+
+---------------------------------------------------------------------------------------
+Python Program to Generate a Dictionary that Contains Numbers (between 1 and n) in the Form (x,x*x).
+
+
+This is a Python Program to generate a dictionary that contains numbers (between 1 and n) in the form (x,x*x).
+
+
+
+n=int(input(&quot;Enter a number:&quot;))
+d={x:x*x for x in range(1,n+1)}
+print(d)
+
+Enter a number:5
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+---------------------------------------------------------------------------------------
+
+Python Program to Sum All the Items in a Dictionary
+
+
+This is a Python Program to find the sum all the items in a dictionary.
+
+
+d={'A':100,'B':540,'C':239}
+print(&quot;Total sum of values in the dictionary:&quot;)
+print(sum(d.values()))
+
+
+Total sum of values in the dictionary:
+879
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------

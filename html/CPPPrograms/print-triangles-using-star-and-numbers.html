@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Get Code Dump</title>
+  <meta name="description" content="Collecton of huge amount of sample program for wide range of Programming languages">
+  <meta name="keywords" content="C, C++, Java, Python, Shell, PHP, C#, HTML,CSS,XML,JavaScript">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121314542-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121314542-1');
+      </script>
+
+      <link rel="shortcut icon" href="/logo-top.png" type="image/x-icon" />
+      <link rel="stylesheet" type="text/css" href="/CPPPrograms/CPPCodePage.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid" id="headerSection">
+            <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+            <script type="text/javascript">
+               $(document).ready(function(){
+                   $('#headerSection').load('/in-headerSection.html');
+               });
+            </script>  
+         </div>
+      </nav>
+      <div class="container-fluid">
+         <div class="row content" id=rowContent>
+            <div class="col-sm-2 sidenav" id = "CPPcodeListLeftColumn">
+               <p class="lead" align="center"> C++ Program List </p>
+               <div id="codeListLeftColumn">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#codeListLeftColumn').load('/CPPPrograms/in-programList.html #justProgramList');
+                  });
+               </script>  
+            </div>
+            </div>
+            <div class="col-sm-8" id = codeSection>
+               <div >
+                  <p style="word-wrap: break-word;" id="description">
+<p id="codeHeading">Programs to print triangles using *, numbers and characters
+</p>
+<div><p id="codeDescription">This programs shows how to print triangles using *, numbers and characters
+</p></div>
+</br></br><div><p id="codeDescription">Example 1: Program to print half pyramid using *
+</p></div>
+<pre id="code">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = 1; i &lt;= rows; ++i)
+    {
+        for(int j = 1; j &lt;= i; ++j)
+        {
+            cout &lt;&lt; &quot;* &quot;;
+        }
+        cout &lt;&lt; &quot;n&quot;;
+    }
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">*
+* *
+* * *
+* * * *
+* * * * *
+</pre>
+</br></br><div><p id="codeDescription">Example 2: Program to print half pyramid a using numbers
+</p></div>
+<pre id="code">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = 1; i &lt;= rows; ++i)
+    {
+        for(int j = 1; j &lt;= i; ++j)
+        {
+            cout &lt;&lt; j &lt;&lt; &quot; &quot;;
+        }
+        cout &lt;&lt; &quot;n&quot;;
+    }
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+</pre>
+</br></br><div><p id="codeDescription">Example 3: Program to print half pyramid using alphabets
+</p></div>
+<pre id="code">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    char input, alphabet = 'A';
+
+    cout &lt;&lt; &quot;Enter the uppercase character you want to print in the last row: &quot;;
+    cin &gt;&gt; input;
+
+    for(int i = 1; i &lt;= (input-'A'+1); ++i)
+    {
+        for(int j = 1; j &lt;= i; ++j)
+        {
+            cout &lt;&lt; alphabet &lt;&lt; &quot; &quot;;
+        }
+        ++alphabet;
+
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">A
+B B
+C C C
+D D D D
+E E E E E
+</pre>
+</br></br><div><p id="codeDescription">Example 4: Inverted half pyramid using *
+</p></div>
+<pre id="code">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = rows; i &gt;= 1; --i)
+    {
+        for(int j = 1; j &lt;= i; ++j)
+        {
+            cout &lt;&lt; &quot;* &quot;;
+        }
+        cout &lt;&lt; endl;
+    }
+    
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">* * * * *
+* * * *
+* * * 
+* *
+*
+</pre>
+</br></br><div><p id="codeDescription">Example 5: Inverted half pyramid using numbers
+</p></div>
+<pre id="code">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = rows; i &gt;= 1; --i)
+    {
+        for(int j = 1; j &lt;= i; ++j)
+        {
+            cout &lt;&lt; j &lt;&lt; &quot; &quot;;
+        }
+        cout &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">1 2 3 4 5
+1 2 3 4 
+1 2 3
+1 2
+1
+
+</pre>
+</br></br><div><p id="codeDescription">Example 6: Program to print full pyramid using *
+</p></div>
+<pre id="code">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int space, rows;
+
+    cout &lt;&lt;&quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = 1, k = 0; i &lt;= rows; ++i, k = 0)
+    {
+        for(space = 1; space &lt;= rows-i; ++space)
+        {
+            cout &lt;&lt;&quot;  &quot;;
+        }
+
+        while(k != 2*i-1)
+        {
+            cout &lt;&lt; &quot;* &quot;;
+            ++k;
+        }
+        cout &lt;&lt; endl;
+    }    
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">        *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
+</pre>
+</br></br><div><p id="codeDescription">Example 7: Program to print pyramid using numbers
+</p></div>
+<pre id="code">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows, count = 0, count1 = 0, k = 0;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = 1; i &lt;= rows; ++i)
+    {
+        for(int space = 1; space &lt;= rows-i; ++space)
+        {
+            cout &lt;&lt; &quot;  &quot;;
+            ++count;
+        }
+
+        while(k != 2*i-1)
+        {
+            if (count &lt;= rows-1)
+            {
+                cout &lt;&lt; i+k &lt;&lt; &quot; &quot;;
+                ++count;
+            }
+            else
+            {
+                ++count1;
+                cout &lt;&lt; i+k-2*count1 &lt;&lt; &quot; &quot;;
+            }
+            ++k;
+        }
+        count1 = count = k = 0;
+
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">
+        1
+      2 3 2
+    3 4 5 4 3
+  4 5 6 7 6 5 4
+5 6 7 8 9 8 7 6 5
+</pre>
+</br></br><div><p id="codeDescription">Example 8: Inverted full pyramid using *
+</p></div>
+<pre id="code">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = rows; i &gt;= 1; --i)
+    {
+        for(int space = 0; space &lt; rows-i; ++space)
+            cout &lt;&lt; &quot;  &quot;;
+
+        for(int j = i; j &lt;= 2*i-1; ++j)
+            cout &lt;&lt; &quot;* &quot;;
+
+        for(int j = 0; j &lt; i-1; ++j)
+            cout &lt;&lt; &quot;* &quot;;
+
+        cout &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">* * * * * * * * *
+  * * * * * * *
+    * * * * *
+      * * *
+        *
+</pre>
+                  </p>
+               </div>
+               <hr>
+            </div>
+            <div class="col-sm-2 sidenav" id="rightColumn" style="overflow-y: scroll; height: calc(90vh - 15px);">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#rightColumn').load('/in-rightColumn.html');
+                  });
+               </script>  
+            </div>
+         </div>
+      </div>
+      <footer class="container-fluid text-center" id="footerSection">
+         <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+         <script type="text/javascript">
+            $(document).ready(function(){
+                $('#footerSection').load('/in-footerSection.html');
+            });
+         </script> 
+      </footer>
+   </body>
+</html>

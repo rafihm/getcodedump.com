@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Get Code Dump</title>
+  <meta name="description" content="Collecton of huge amount of sample program for wide range of Programming languages">
+  <meta name="keywords" content="C, C++, Java, Python, Shell, PHP, C#, HTML,CSS,XML,JavaScript">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121314542-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121314542-1');
+      </script>
+
+      <link rel="shortcut icon" href="/logo-top.png" type="image/x-icon" />
+      <link rel="stylesheet" type="text/css" href="/CPrograms/CCodePage.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid" id="headerSection">
+            <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+            <script type="text/javascript">
+               $(document).ready(function(){
+                   $('#headerSection').load('/in-headerSection.html');
+               });
+            </script>  
+         </div>
+      </nav>
+      <div class="container-fluid">
+         <div class="row content" id=rowContent>
+            <div class="col-sm-2 sidenav" id = "ccodeListLeftColumn">
+               <p class="lead" align="center"> C Program List </p>
+               <div id="codeListLeftColumn">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#codeListLeftColumn').load('/CPrograms/in-programList.html #justProgramList');
+                  });
+               </script>  
+            </div>
+            </div>
+            <div class="col-sm-8" id = codeSection>
+               <div >
+                  <p style="word-wrap: break-word;" id="description">
+<p id="codeHeading">C Program to Add Two Complex Numbers by Passing Structure to a Function
+
+</p>
+<div><p id="codeDescription">This program takes two complex numbers as structures and adds them with the use of functions.
+
+</p></div>
+</br><pre id="code">#include &lt;stdio.h&gt;
+typedef struct complex
+{
+    float real;
+    float imag;
+} complex;
+complex add(complex n1,complex n2);
+
+int main()
+{
+    complex n1, n2, temp;
+
+    printf(&quot;For 1st complex number n&quot;);
+    printf(&quot;Enter real and imaginary part respectively:n&quot;);
+    scanf(&quot;%f %f&quot;, &amp;n1.real, &amp;n1.imag);
+
+    printf(&quot;nFor 2nd complex number n&quot;);
+    printf(&quot;Enter real and imaginary part respectively:n&quot;);
+    scanf(&quot;%f %f&quot;, &amp;n2.real, &amp;n2.imag);
+
+    temp = add(n1, n2);
+    printf(&quot;Sum = %.1f + %.1fi&quot;, temp.real, temp.imag);
+
+    return 0;
+}
+
+complex add(complex n1, complex n2)
+{
+      complex temp;
+
+      temp.real = n1.real + n2.real;
+      temp.imag = n1.imag + n2.imag;
+
+      return(temp);
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">For 1st complex number
+Enter real and imaginary part respectively: 2.3
+4.5
+
+For 2nd complex number
+Enter real and imaginary part respectively: 3.4
+5
+Sum = 5.7 + 9.5i
+</pre></br>
+                  </p>
+               </div>
+               <hr>
+            </div>
+            <div class="col-sm-2 sidenav" id="rightColumn" style="overflow-y: scroll; height: calc(90vh - 15px);">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#rightColumn').load('/in-rightColumn.html');
+                  });
+               </script>  
+            </div>
+         </div>
+      </div>
+      <footer class="container-fluid text-center" id="footerSection">
+         <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+         <script type="text/javascript">
+            $(document).ready(function(){
+                $('#footerSection').load('/in-footerSection.html');
+            });
+         </script> 
+      </footer>
+   </body>
+</html>

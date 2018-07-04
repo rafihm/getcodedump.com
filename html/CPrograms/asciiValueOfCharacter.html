@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Get Code Dump</title>
+  <meta name="description" content="Collecton of huge amount of sample program for wide range of Programming languages">
+  <meta name="keywords" content="C, C++, Java, Python, Shell, PHP, C#, HTML,CSS,XML,JavaScript">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121314542-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121314542-1');
+      </script>
+
+      <link rel="shortcut icon" href="/logo-top.png" type="image/x-icon" />
+      <link rel="stylesheet" type="text/css" href="/CPrograms/CCodePage.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid" id="headerSection">
+            <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+            <script type="text/javascript">
+               $(document).ready(function(){
+                   $('#headerSection').load('/in-headerSection.html');
+               });
+            </script>  
+         </div>
+      </nav>
+      <div class="container-fluid">
+         <div class="row content" id=rowContent>
+            <div class="col-sm-2 sidenav" id = "ccodeListLeftColumn">
+               <p class="lead" align="center"> C Program List </p>
+               <div id="codeListLeftColumn">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#codeListLeftColumn').load('/CPrograms/in-programList.html #justProgramList');
+                  });
+               </script>  
+            </div>
+            </div>
+            <div class="col-sm-8" id = codeSection>
+               <div >
+                  <p style="word-wrap: break-word;" id="description">
+                     <p id="codeHeading">C Program to Find ASCII Value of a Character</p>
+                     <div><p id="codeDescription">In C programming, a character variable holds ASCII value (an integer number between 0 an 127) rather than character itself. You will learn how to find ASCII value of a character in this program.</p></div></br>
+
+
+<pre id="code">#include &lt;stdio.h&gt;
+int main()
+{
+    char c;
+    printf(&quot;Enter a character: &quot;);
+
+    // Reads character input from the user
+    scanf(&quot;%c&quot;, &amp;c);  
+    
+    // %d displays the integer value of a character
+    // %c displays the actual character
+    printf(&quot;ASCII Value of %c = %d&quot;, c, c);
+    return 0;
+}
+</pre>
+
+
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div>
+
+                        <h5>Output:</h5>
+
+
+
+<pre id="output">Enter a character: C
+ASCII Value of C = 67
+</pre>
+
+
+                  </p>
+               </div>
+               <hr>
+            </div>
+            <div class="col-sm-2 sidenav" id="rightColumn" style="overflow-y: scroll; height: calc(90vh - 15px);">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#rightColumn').load('/in-rightColumn.html');
+                  });
+               </script>  
+            </div>
+         </div>
+      </div>
+      <footer class="container-fluid text-center" id="footerSection">
+         <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+         <script type="text/javascript">
+            $(document).ready(function(){
+                $('#footerSection').load('/in-footerSection.html');
+            });
+         </script> 
+      </footer>
+   </body>
+</html>

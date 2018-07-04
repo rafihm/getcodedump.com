@@ -1,0 +1,1976 @@
+A simple program demonstrating C++ class
+
+This programs shows how to create a class in C++
+
+#include &lt;iostream&gt;
+using namespace std;
+
+class cl {
+  int i; // private by default
+public:
+  int get_i();
+  void put_i(int j);
+};
+
+int cl::get_i()
+{
+  return i;
+}
+
+void cl::put_i(int j)
+{
+  i = j;
+}
+
+int main()
+{
+  cl s;
+
+  s.put_i(10);
+  cout &lt;&lt; s.get_i() &lt;&lt;endl;
+
+  return 0;
+}
+
+10
+
+====================================================================================================
+C++ Program to Demonstrate constructor in a C++ class
+
+This program shows the demonstration of constructor in C++ class
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Class to represent a box
+class Box
+{
+  public:
+    double length;
+    double breadth;
+    double height;
+
+    // Constructor
+    Box(double lengthValue, double breadthValue, double heightValue)
+    {
+      cout &lt;&lt; &quot;Box constructor called&quot; &lt;&lt; endl;
+      length = lengthValue;
+      breadth = breadthValue;
+      height = heightValue;
+    }
+
+    // Function to calculate the volume of a box
+    double volume()
+    {
+      return length * breadth * height;
+    }
+};
+
+
+Box constructor called
+
+Size of first Box object is 80 by 50 by 40
+Volume of first Box object is 160000
+
+====================================================================================================
+C++ Program to Demonstrate Inline Initialization of Constructor
+
+This program shows using inline initialization in Constructor
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Class to represent a box
+class Box
+{
+  public:
+    double length;
+    double breadth;
+    double height;
+
+    // Inline initialization
+    Box(double lv = 1.0, double bv = 1.0, double hv = 1.0):length(lv),
+                                                           breadth(bv),
+                                                           height(hv)
+    {
+      cout &lt;&lt; &quot;Box constructor called&quot; &lt;&lt; endl;
+    }
+
+    // Function to calculate the volume of a box
+    double volume()
+    {
+      return length * breadth * height;
+    }
+};
+
+int main()
+{
+  Box firstBox(80.0, 50.0, 40.0);
+
+  // Calculate the volume of the box
+  double firstBoxVolume = firstBox.volume();
+  cout &lt;&lt; endl;
+  cout &lt;&lt; &quot;Size of first Box object is &quot;
+       &lt;&lt; firstBox.length  &lt;&lt; &quot; by &quot;
+       &lt;&lt; firstBox.breadth &lt;&lt; &quot; by &quot;
+	&lt;&lt; firstBox.height
+       &lt;&lt; endl;
+  cout &lt;&lt; &quot;Volume of first Box object is &quot; &lt;&lt; firstBoxVolume
+       &lt;&lt; endl;
+
+  return 0;
+}
+
+
+Box constructor called
+
+Size of first Box object is 80 by 50 by 40
+Volume of first Box object is 160000
+
+
+====================================================================================================
+C++ Program to Demonstrate Copy Constructor
+
+This program Demonstrates Copy Constructor in C++
+
+#include &lt;iostream&gt;
+#include &lt;cstdlib&gt;
+using namespace std;
+
+class myclass {
+  int *p;
+public:
+  myclass(int i);
+  ~myclass();
+  int getval() { return *p; }
+};
+
+myclass::myclass(int i)
+{
+  cout &lt;&lt; &quot;Allocating pn&quot;;
+  p = new int;
+  if(!p) {
+    cout &lt;&lt; &quot;Allocation failure.n&quot;;
+    exit(1); // exit program if out of memory
+  }
+
+  *p = i;
+}
+
+myclass::~myclass()
+{
+  cout &lt;&lt; &quot;Freeing pn&quot;;
+  delete p;
+}
+
+// when this function is called, the copy constructor is called
+void display(myclass ob)
+{
+  cout &lt;&lt; ob.getval() &lt;&lt; 'n';
+}
+
+int main()
+{
+  myclass a(10);
+
+  display(a);
+
+  return 0;
+}
+
+
+
+Allocating p
+10
+Freeing p
+Freeing p
+====================================================================================================
+C++ Program to Demonstrate Destructor
+
+This program demonstrates Destructor in C++
+
+#include &lt;iostream&gt;
+#include &lt;cstdlib&gt;
+using namespace std;
+
+class myclass {
+  int *p;
+public:
+  myclass(int i);
+  ~myclass();
+  int getval() { return *p; }
+};
+
+myclass::myclass(int i)
+{
+  cout &lt;&lt; &quot;Allocating pn&quot;;
+  p = new int;
+  if(!p) {
+    cout &lt;&lt; &quot;Allocation failure.n&quot;;
+    exit(1); // exit program if out of memory
+  }
+
+  *p = i;
+}
+
+// use destructor to free memory
+myclass::~myclass()
+{
+  cout &lt;&lt; &quot;Freeing pn&quot;;
+  delete p;
+}
+
+void display(myclass &amp;ob)
+{
+  cout &lt;&lt; ob.getval() &lt;&lt; 'n';
+}
+int main()
+{
+  myclass a(10);
+
+  display(a);
+
+  return 0;
+}
+
+
+Allocating p
+10
+Freeing p
+
+
+====================================================================================================
+C++ Program to Demonstrate If statement
+
+This program shows the demonstration of If statement
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+  int a, b;
+
+  cout &lt;&lt; &quot;Enter first number: &quot;;
+  cin &gt;&gt; a;
+  cout &lt;&lt; &quot;Enter second number: &quot;;
+  cin &gt;&gt; b;
+
+  if(a &lt; b) 
+	  cout &lt;&lt; &quot;First number is less than second.n&quot;;
+
+  return 0;
+}
+
+Enter first number: 5
+Enter second number: 7
+First number is less than second.
+
+====================================================================================================
+C++ Program to Demonstrate If-else statement
+
+This program shows the demonstration of If-else statement
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+  int a, b;
+
+  cout &lt;&lt; &quot;Enter first number: &quot;;
+  cin &gt;&gt; a;
+  cout &lt;&lt; &quot;Enter second number: &quot;;
+  cin &gt;&gt; b;
+
+  if(a &lt; b) 
+	  cout &lt;&lt; &quot;First number is less than second.n&quot;;
+  else
+	  cout &lt;&lt; &quot;First number is greater than or equal to second.n&quot;;
+
+  return 0;
+
+}
+
+
+Enter first number: 6
+Enter second number: 3
+First number is greater than or equal to second.
+
+====================================================================================================
+C++ Program to Demonstrate Nested If-else statement
+
+This program shows the demonstration of Nested If-else statement
+
+#include &lt;iostream&gt;
+// &lt;cstdlib&gt; is needed in order to use the rand().
+// For older compilers, use &lt;stdlib.h&gt;
+#include &lt;stdlib.h&gt; 
+using namespace std;
+
+int main()
+{
+  int magic;  // magic number
+  int guess;  // user's guess
+
+  magic = rand(); // get a random number
+  
+  cout &lt;&lt; &quot;Enter your guess: &quot;;
+  cin &gt;&gt; guess;
+
+  if(guess == magic) 
+	  // Notice the &quot;==&quot; operator, which compares two values.   
+	  cout &lt;&lt; &quot;** Right **&quot;;
+  cout &lt;&lt; &quot;The magic number was: &quot; &lt;&lt; magic &lt;&lt; endl;
+  return 0;
+}
+
+mercury[51]% NestedIf
+Enter your guess: 879
+The magic number was: 16838
+
+====================================================================================================
+C++ Program to Demonstrate 'For' statement
+
+This program shows the demonstration of 'For' statement
+
+#include &lt;iostream&gt;
+#include &lt;math.h&gt; // for newer compilers, use &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+  int num;
+  double sq_root;
+
+  for(num=1; num &lt; 10; num++) {
+    sq_root = sqrt((double) num); //casting num from integer to double 
+    				  // then taking its square root
+    cout &lt;&lt; num &lt;&lt; &quot;  &quot; &lt;&lt; sq_root &lt;&lt; 'n';
+  }
+
+  return 0;
+}
+
+
+
+1    1
+2    1.41421
+3    1.73205
+4    2
+5    2.23606
+6    2.44949
+7    2.64575
+8    2.82842
+9    3
+
+
+
+====================================================================================================
+C++ Program to Demonstrate 'while' statement
+
+This program shows the demonstration of 'while' statement
+
+#include &lt;iostream&gt;
+// &lt;cstdlib&gt; is needed in order to use the rand().
+// For older compilers, use &lt;stdlib.h&gt;
+#include &lt;stdlib.h&gt; 
+using namespace std;
+
+int main()
+{
+  int magic;  // magic number
+  int guess;  // user's guess
+
+  cout &lt;&lt; &quot;I will come up with a magic number between 0 and 9 &quot;;
+  cout &lt;&lt; &quot;and ask you to guess it.&quot; &lt;&lt; endl;
+
+  magic = rand(); // get a random number between 0 and 9
+  
+  cout &lt;&lt; &quot;Enter your guess: &quot;;
+  cin &gt;&gt; guess;
+
+  while (guess != magic)  // as long as guess is incorrect
+  {
+	  if(guess &gt; magic)
+	  {
+	          cout &lt;&lt; &quot;Too big! Guess again...&quot; &lt;&lt; endl;
+	  }
+	  else            // guess is less than magic
+	  {
+		  cout &lt;&lt; &quot;Too small! Guess again...&quot; &lt;&lt; endl;
+	  }
+	  cin &gt;&gt; guess;
+  }
+  cout &lt;&lt; &quot;You are RIGHT!&quot; &lt;&lt; endl;;
+  return 0;
+}
+
+
+
+I will come up with a magic number between 0 and 9 and ask you to guess it.
+Enter your guess: 6
+Too small! Guess again...
+7
+Too small! Guess again...
+8
+You are RIGHT!
+
+
+====================================================================================================
+C++ Program to Demonstrate 'switch' statement
+
+This program shows the demonstration of 'switch' statement
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+	int choice;
+
+	cout &lt;&lt; &quot;Enter an integer number: 1 - 5 &quot; ;
+	cin &gt;&gt; choice;
+
+	switch (choice)
+	{
+		case 1:
+		   cout &lt;&lt; &quot;You entered 1.&quot;;
+		   break;
+		case 2:
+		   cout &lt;&lt; &quot;You entered 2.&quot;;
+		   break;
+		case 3:
+		   cout &lt;&lt; &quot;You entered 3.&quot;;
+		   break;
+		case 4:
+		   cout &lt;&lt; &quot;You entered 4.&quot;;
+		   break;
+		case 5:
+		   cout &lt;&lt; &quot;You entered 5.&quot;;
+		   break;
+		default:
+		   cout &lt;&lt; &quot;Invalid input.&quot;;
+	}
+
+	return 0;
+
+}
+
+
+Enter an integer number: 1 - 5 4
+You entered 4.
+
+====================================================================================================
+C++ Program to Demonstrate one Dimensional Integer Array
+
+This program shows the demonstration of one Dimensional Integer Array
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+	int sample[10]; // this reserves 10 integer elements
+	int t;
+
+	// load the array
+	for(t = 0; t &lt; 10; t++)
+		sample[t] = t;
+
+	// display the array
+	for(t = 0; t &lt; 10; ++t)
+		cout &lt;&lt; sample[t] &lt;&lt; ' ' ;
+	
+	return 0;
+}
+
+
+0 1 2 3 4 5 6 7 8 9 mercury[36]% 
+
+====================================================================================================
+C++ Program to Demonstrate One dimensional character array (C-string)
+
+This program shows the demonstration of One dimensional character array (C-string)
+
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt; //for newer compilers, include &lt;cstdlib&gt;
+using namespace std;
+
+int main()
+{
+	char name[32]; // big enough to hold 32 characters
+
+	// prompt for the name
+	cout &lt;&lt; &quot;What's your name?&quot; &lt;&lt; endl;
+	gets(name); // read a string from the key board.
+	cout &lt;&lt; &quot;Hello! &quot; &lt;&lt; name &lt;&lt; &quot;!&quot;  &lt;&lt; endl;
+
+	return 0;
+}
+
+
+
+What's your name?
+Bruce Lee
+Hello! Bruce Lee!
+
+====================================================================================================
+C++ Program to Demonstrate Two dimensional integer array
+
+This program shows the demonstration of Two dimensional integer array
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+  // C++ allows for the initialization of arrays.  In the following,
+  // we are initializing a 10x2 integer array. After initialization,
+  // sqrs[0][0] = 1
+  // sqrs[0][1] = 1
+  // sqrs[1][0] = 2
+  // sqrs[1][1] = 4 
+  // and so on
+  int sqrs[10][2] = { 
+         {1, 1}, 
+	 {2, 4}, // The square of 2 is 4,and so on
+	 {3, 9}, 
+	 {4, 16}, 
+	 {5, 25}, 
+	 {6, 36}, 
+	 {7, 49}, 
+	 {8, 64}, 
+	 {9, 81}, 
+	 {10, 100} 
+  };
+
+  int i, j;
+
+  cout &lt;&lt; &quot;Enter a number between 1 and 10: &quot;;
+  cin &gt;&gt; i;
+
+  // look up i
+  for(j = 0; j &lt; 10; j++) 
+    if(sqrs[j][0] == i) break; // break from loop if i is found 
+  cout &lt;&lt; &quot;The square of &quot; &lt;&lt; i &lt;&lt; &quot; is &quot; ;
+  cout &lt;&lt; sqrs[j][1] &lt;&lt; endl;
+
+  return 0;
+}
+
+
+Enter a number between 1 and 10: 6
+The square of 6 is 36
+
+
+====================================================================================================
+C++ Program to Demonstrate Two dimensional character array (Array of Strings)
+
+This program shows the demonstration of Two dimensional character array (Array of Strings)
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// function prototyping
+int menu();    // funciton to display the menu
+void enter();  // function to enter info
+void report(); // function to print report
+
+// Global variables:
+char name[2][80];  // this array holds employee names
+char phone[2][20]; // their phone numbers
+float hours[2];    // hours worked per week
+float wage[2];     // wage
+int choice;
+
+int main()
+{
+  do {
+    choice = menu(); // get selection
+    switch(choice) {
+      case 0: break;
+      case 1: enter();
+        break;
+      case 2: report();
+        break;
+      default: cout &lt;&lt; &quot;Try again.nn&quot;;
+    }
+  } while(choice != 0);
+
+  return 0;
+}
+
+// Return a user's selection.
+int menu()
+{
+  int choice;
+
+  cout &lt;&lt; &quot;0. Quitn&quot;;
+  cout &lt;&lt; &quot;1. Enter informationn&quot;;
+  cout &lt;&lt; &quot;2. Report informationn&quot;;
+  cout &lt;&lt; &quot;nChoose one: &quot;;
+  cin &gt;&gt; choice;
+
+  return choice;
+}
+
+// Enter information.
+void enter()
+{
+  int i;
+  for(i=0; i&lt;2; i++) {
+    cout &lt;&lt; &quot;Enter last name: &quot;;
+    cin &gt;&gt; name[i];
+    cout &lt;&lt; &quot;Enter phone number: &quot;;
+    cin &gt;&gt; phone[i];
+    cout &lt;&lt; &quot;Enter number of hours worked: &quot;;
+    cin &gt;&gt; hours[i];
+    cout &lt;&lt; &quot;Enter wage: &quot;;
+    cin &gt;&gt; wage[i];
+  }
+}
+
+// Display report.
+void report()
+{
+  int i;
+
+  for(i=0; i&lt;2; i++) {
+    cout &lt;&lt; name[i] &lt;&lt; ' ' &lt;&lt; phone[i] &lt;&lt; 'n';
+    cout &lt;&lt; &quot;Pay for the week: &quot; &lt;&lt; wage[i] * hours[i];
+    cout &lt;&lt; 'n';
+  }
+}
+
+
+
+0. Quit
+1. Enter information
+2. Report information
+
+Choose one: 1
+Enter last name: Smith
+Enter phone number: 5556666
+Enter number of hours worked: 30
+Enter wage: 23.40
+Enter last name: Bush
+Enter phone number: 6668888
+Enter number of hours worked: 20
+Enter wage: 40.00
+0. Quit
+1. Enter information
+2. Report information
+
+Choose one: 2
+Smith 5556666
+Pay for the week: 702
+Bush 6668888
+Pay for the week: 800
+0. Quit
+1. Enter information
+2. Report information
+
+Choose one: 0
+====================================================================================================
+C++ Program to Find GCD
+
+Examples on different ways to calculate GCD of two integers (for both positive and negative integers) using loops and decision making statements.
+
+
+Example 1: Find GCD using while loop
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n1, n2;
+
+    cout &lt;&lt; &quot;Enter two numbers: &quot;;
+    cin &gt;&gt; n1 &gt;&gt; n2;
+    
+    while(n1 != n2)
+    {
+        if(n1 &gt; n2)
+            n1 -= n2;
+        else
+            n2 -= n1;
+    }
+
+    cout &lt;&lt; &quot;HCF = &quot; &lt;&lt; n1;
+    return 0;
+}
+
+Enter two numbers: 78
+52
+HCF = 26
+
+
+Example: 2. Find HCF/GCD using for loop
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n1, n2, hcf;
+    cout &lt;&lt; &quot;Enter two numbers: &quot;;
+    cin &gt;&gt; n1 &gt;&gt; n2;
+
+    // Swapping variables n1 and n2 if n2 is greater than n1.
+    if ( n2 &gt; n1) {   
+        int temp = n2;
+        n2 = n1;
+        n1 = temp;
+    }
+    
+    for (int i = 1; i &lt;=  n2; ++i) {
+        if (n1 % i == 0 &amp;&amp; n2 % i ==0) {
+            hcf = i;
+        }
+    }
+
+    cout &lt;&lt; &quot;HCF = &quot; &lt;&lt; hcf;
+    return 0;
+}
+
+
+Enter two numbers: 78
+52
+HCF = 26
+
+
+
+
+====================================================================================================
+C++ Program to Find LCM
+
+Examples on different ways to calculate the LCM (Lowest Common Multiple) of two integers using loops and decision making statements.
+
+
+Example 1: Find LCM
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n1, n2, max;
+
+    cout &lt;&lt; &quot;Enter two numbers: &quot;;
+    cin &gt;&gt; n1 &gt;&gt; n2;
+    
+    // maximum value between n1 and n2 is stored in max
+    max = (n1 &gt; n2) ? n1 : n2;
+
+    do
+    {
+        if (max % n1 == 0 &amp;&amp; max % n2 == 0)
+        {
+            cout &lt;&lt; &quot;LCM = &quot; &lt;&lt; max;
+            break;
+        }
+        else
+            ++max;
+    } while (true);
+    
+    return 0;
+}
+
+
+Enter two numbers: 12
+18
+LCM = 36
+
+
+Example 2: Find LCM using HCF
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n1, n2, hcf, temp, lcm;
+
+    cout &lt;&lt; &quot;Enter two numbers: &quot;;
+    cin &gt;&gt; n1 &gt;&gt; n2;
+
+    hcf = n1;
+    temp = n2;
+    
+    while(hcf != temp)
+    {
+        if(hcf &gt; temp)
+            hcf -= temp;
+        else
+            temp -= hcf;
+    }
+
+    lcm = (n1 * n2) / hcf;
+
+    cout &lt;&lt; &quot;LCM = &quot; &lt;&lt; lcm;
+    return 0;
+}
+
+
+Enter two numbers: 12
+18
+LCM = 36
+
+
+
+
+====================================================================================================
+C++ Program to Reverse a Number
+
+
+Example to reverse an integer entered by the user in C++ programming. This problem is solved by using while loop in this example.
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n, reversedNumber = 0, remainder;
+
+    cout &lt;&lt; &quot;Enter an integer: &quot;;
+    cin &gt;&gt; n;
+
+    while(n != 0)
+    {
+        remainder = n;
+        reversedNumber = reversedNumber*10 + remainder;
+        n /= 10;
+    }
+
+    cout &lt;&lt; &quot;Reversed Number = &quot; &lt;&lt; reversedNumber;
+
+    return 0;
+}
+
+
+Enter an integer: 12345
+Reversed number = 54321
+
+
+====================================================================================================
+C++ Program to Calculate Power of a Number
+
+In this article, you will learn to compute power to a number manually, and by using pow() function.
+
+
+Example 1: Compute Power Manually
+
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() 
+{
+    int exponent;
+    float base, result = 1;
+
+    cout &lt;&lt; &quot;Enter base and exponent respectively:  &quot;;
+    cin &gt;&gt; base &gt;&gt; exponent;
+
+    cout &lt;&lt; base &lt;&lt; &quot;^&quot; &lt;&lt; exponent &lt;&lt; &quot; = &quot;;
+
+    while (exponent != 0) {
+        result *= base;
+        --exponent;
+    }
+
+    cout &lt;&lt; result;
+    
+    return 0;
+}
+
+
+Enter base and exponent respectively:  3.4
+5
+3.4^5 = 454.354
+
+
+Example 2: Compute power using pow() Function
+
+
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+
+using namespace std;
+
+int main() 
+{
+    float base, exponent, result;
+
+    cout &lt;&lt; &quot;Enter base and exponent respectively:  &quot;;
+    cin &gt;&gt; base &gt;&gt; exponent;
+
+    result = pow(base, exponent);
+
+    cout &lt;&lt; base &lt;&lt; &quot;^&quot; &lt;&lt; exponent &lt;&lt; &quot; = &quot; &lt;&lt; result;
+    
+    return 0;
+}
+
+
+Enter base and exponent respectively:  2.3
+4.5
+2.3^4.5 = 42.44
+
+
+
+====================================================================================================
+Increment ++ and Decrement -- Operator Overloading in C++ Programming
+
+
+In this example, you'll learn to overload increment ++ and decrement -- operators in C++.
+
+Example 1: Prefix ++ Increment Operator Overloading with no return type
+
+#include &lt;iostream&gt;
+using namespace std;
+
+class Check
+{
+    private:
+       int i;
+    public:
+       Check(): i(0) {  }
+       void operator ++() 
+          { ++i; }
+       void Display() 
+          { cout &lt;&lt; &quot;i=&quot; &lt;&lt; i &lt;&lt; endl; }
+};
+
+int main()
+{
+    Check obj;
+
+    // Displays the value of data member i for object obj
+    obj.Display();
+
+    // Invokes operator function void operator ++( )
+    ++obj; 
+  
+    // Displays the value of data member i for object obj
+    obj.Display();
+
+    return 0;
+}
+
+
+i=0
+i=1
+
+
+Example 2: Prefix Increment ++ operator overloading with return type
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+class Check
+{
+  private:
+    int i;
+  public:
+    Check(): i(0) {  }
+
+    // Return type is Check
+    Check operator ++()
+    {
+       Check temp;
+       ++i;
+       temp.i = i;
+
+       return temp;
+    }
+
+    void Display()
+    { cout &lt;&lt; &quot;i = &quot; &lt;&lt; i &lt;&lt; endl; }
+};
+
+int main()
+{
+    Check obj, obj1;
+    obj.Display();
+    obj1.Display();
+
+    obj1 = ++obj;
+
+    obj.Display();
+    obj1.Display();
+
+    return 0;
+}
+
+
+i = 0
+i = 0
+i = 1
+i = 1
+
+
+Example 3: Postfix Increment ++ Operator Overloading
+
+#include &lt;iostream&gt;
+using namespace std;
+
+class Check
+{
+  private:
+    int i;
+  public:
+    Check(): i(0) {  }
+    Check operator ++ ()
+    {
+        Check temp;
+        temp.i = ++i;
+        return temp;
+    }
+
+    // Notice int inside barcket which indicates postfix increment.
+    Check operator ++ (int)
+    {
+        Check temp;
+        temp.i = i++;
+        return temp;
+    }
+
+    void Display()
+    { cout &lt;&lt; &quot;i = &quot;&lt;&lt; i &lt;&lt;endl; }
+};
+
+int main()
+{
+    Check obj, obj1;    
+    obj.Display(); 
+    obj1.Display();
+
+    // Operator function is called, only then value of obj is assigned to obj1
+    obj1 = ++obj;
+    obj.Display();
+    obj1.Display();
+
+    // Assigns value of obj to obj1, only then operator function is called.
+    obj1 = obj++;
+    obj.Display();
+    obj1.Display();
+
+    return 0;
+}
+
+
+i = 0
+i = 0
+i = 1
+i = 1
+i = 2
+i = 1
+
+
+
+Example 4: Operator Overloading of Decrement -- Operator
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+class Check
+{
+  private:
+    int i;
+  public:
+    Check(): i(3) {  }
+    Check operator -- ()
+    {
+        Check temp;
+        temp.i = --i;
+        return temp;
+    }
+
+    // Notice int inside barcket which indicates postfix decrement.
+    Check operator -- (int)
+    {
+        Check temp;
+        temp.i = i--;
+        return temp;
+    }
+
+    void Display()
+    { cout &lt;&lt; &quot;i = &quot;&lt;&lt; i &lt;&lt;endl; }
+};
+
+int main()
+{
+    Check obj, obj1;    
+    obj.Display(); 
+    obj1.Display();
+
+    // Operator function is called, only then value of obj is assigned to obj1
+    obj1 = --obj;
+    obj.Display();
+    obj1.Display();
+
+    // Assigns value of obj to obj1, only then operator function is called.
+    obj1 = obj--;
+    obj.Display();
+    obj1.Display();
+
+    return 0;
+}
+
+
+i = 3
+i = 3
+i = 2
+i = 2
+i = 1
+i = 2
+
+
+
+
+====================================================================================================
+C++ Program to Subtract Complex Number Using Operator Overloading
+
+
+In this example, you'll learn to subtract complex numbers using operator overloading of the - operator.
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+class Complex
+{
+    private:
+      float real;
+      float imag;
+    public:
+       Complex(): real(0), imag(0){ }
+       void input()
+       {
+           cout &lt;&lt; &quot;Enter real and imaginary parts respectively: &quot;;
+           cin &gt;&gt; real;
+           cin &gt;&gt; imag;
+       }
+
+       // Operator overloading
+       Complex operator - (Complex c2)
+       {
+           Complex temp;
+           temp.real = real - c2.real;
+           temp.imag = imag - c2.imag;
+
+           return temp;
+       }
+
+       void output()
+       {
+           if(imag &lt; 0)
+               cout &lt;&lt; &quot;Output Complex number: &quot;&lt;&lt; real &lt;&lt; imag &lt;&lt; &quot;i&quot;;
+           else
+               cout &lt;&lt; &quot;Output Complex number: &quot; &lt;&lt; real &lt;&lt; &quot;+&quot; &lt;&lt; imag &lt;&lt; &quot;i&quot;;
+       }
+};
+
+int main()
+{
+    Complex c1, c2, result;
+
+    cout&lt;&lt;&quot;Enter first complex number:n&quot;;
+    c1.input();
+
+    cout&lt;&lt;&quot;Enter second complex number:n&quot;;
+    c2.input();
+
+    // In case of operator overloading of binary operators in C++ programming, 
+    // the object on right hand side of operator is always assumed as argument by compiler.
+    result = c1 - c2;
+    result.output();
+
+    return 0;
+}
+
+
+
+
+====================================================================================================
+C++ Program to Find ASCII Value of a Character
+
+In this example, you will learn to find ASCII value of a character in C++.
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+ char c;
+ cout &lt;&lt; &quot;Enter a character: &quot;;
+ cin &gt;&gt; c;
+ cout &lt;&lt; &quot;ASCII Value of &quot; &lt;&lt; c &lt;&lt; &quot; is &quot; &lt;&lt; int(c);
+ return 0;
+}
+
+Enter a character: p
+ASCII Value of p is 112
+
+
+
+
+====================================================================================================
+
+C++ Program to Multiply two Numbers
+
+In this program, user is asked to enter two numbers (floating point numbers). Then, the product of those two numbers is stored in a variable and displayed on the screen.
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    double firstNumber, secondNumber, productOfTwoNumbers;
+    cout &lt;&lt; &quot;Enter two numbers: &quot;;
+
+    // Stores two floating point numbers in variable firstNumber and secondNumber respectively
+    cin &gt;&gt; firstNumber &gt;&gt; secondNumber;
+ 
+    // Performs multiplication and stores the result in variable productOfTwoNumbers
+    productOfTwoNumbers = firstNumber * secondNumber;  
+
+    cout &lt;&lt; &quot;Product = &quot; &lt;&lt; productOfTwoNumbers;    
+    
+    return 0;
+}
+
+Enter two numbers: 3.4
+5.5
+Product = 18.7
+
+====================================================================================================
+C++ Program to Check Whether a Number is Palindrome or Not
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+     int n, num, digit, rev = 0;
+
+     cout &lt;&lt; &quot;Enter a positive number: &quot;;
+     cin &gt;&gt; num;
+
+     n = num;
+
+     do
+     {
+         digit = num % 10;
+         rev = (rev * 10) + digit;
+         num = num / 10;
+     } while (num != 0);
+
+     cout &lt;&lt; &quot; The reverse of the number is: &quot; &lt;&lt; rev &lt;&lt; endl;
+
+     if (n == rev)
+         cout &lt;&lt; &quot; The number is a palindrome&quot;;
+     else
+         cout &lt;&lt; &quot; The number is not a palindrome&quot;;
+
+    return 0;
+}
+
+Enter a positive number: 12321
+The reverse of the number is: 12321
+The number is a palindrome
+
+Enter a positive number: 12331
+The reverse of the number is: 13321
+The number is not a palindrome
+
+
+
+====================================================================================================
+C++ Program to Check Whether a Number is Prime or Not
+
+Example to check whether an integer (entered by the user) is a prime number or not using for loop and if...else statement.
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+  int n, i;
+  bool isPrime = true;
+
+  cout &lt;&lt; &quot;Enter a positive integer: &quot;;
+  cin &gt;&gt; n;
+
+  for(i = 2; i &lt;= n / 2; ++i)
+  {
+      if(n % i == 0)
+      {
+          isPrime = false;
+          break;
+      }
+  }
+  if (isPrime)
+      cout &lt;&lt; &quot;This is a prime number&quot;;
+  else
+      cout &lt;&lt; &quot;This is not a prime number&quot;;
+
+  return 0;
+}
+
+
+
+Enter a positive integer: 29
+This is a prime number.
+
+
+====================================================================================================
+C++ Program to Display Prime Numbers Between Two Intervals
+
+Example to print all prime numbers between two numbers (entered by the user) in C++ Programming. This problem is solved using nested for loop and if...else statement.
+
+
+Example #1: Display Prime Numbers Between two Intervals
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int low, high, i, flag;
+
+    cout &lt;&lt; &quot;Enter two numbers(intervals): &quot;;
+    cin &gt;&gt; low &gt;&gt; high;
+
+    cout &lt;&lt; &quot;Prime numbers between &quot; &lt;&lt; low &lt;&lt; &quot; and &quot; &lt;&lt; high &lt;&lt; &quot; are: &quot;;
+
+    while (low &lt; high)
+    {
+        flag = 0;
+
+        for(i = 2; i &lt;= low/2; ++i)
+        {
+            if(low % i == 0)
+            {
+                flag = 1;
+                break;
+            }
+        }
+
+        if (flag == 0)
+            cout &lt;&lt; low &lt;&lt; &quot; &quot;;
+
+        ++low;
+    }
+
+    return 0;
+}
+
+
+
+Enter two numbers(intervals): 20 50 Prime numbers between 20 and 50 are: 23 29 31 37 41 43 47
+
+
+
+Example #2: Display Prime Numbers When Larger Number is Entered first
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int low, high, flag, temp;
+    
+    cout &lt;&lt; &quot;Enter two numbers(intevals): &quot;;
+    cin &gt;&gt; low &gt;&gt; high;
+
+    //swapping numbers if low is greater than high
+    if (low &gt; high) {
+        temp = low;
+        low = high;
+        high = temp;
+    }
+    cout &lt;&lt; &quot;Prime numbers between &quot; &lt;&lt; low &lt;&lt; &quot; and &quot; &lt;&lt; high &lt;&lt; &quot; are: &quot;;
+
+    while (low &lt; high)
+    {
+        flag = 0;
+
+        for(int i = 2; i &lt;= low/2; ++i)
+        {
+            if(low % i == 0)
+            {
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 0)
+            cout &lt;&lt; low &lt;&lt; &quot; &quot;;
+
+        ++low;
+    }
+    return 0;
+}
+
+
+Enter two numbers(intervals): 20 50 Prime numbers between 20 and 50 are: 23 29 31 37 41 43 47
+
+
+
+
+====================================================================================================
+C++ Program to Check Armstrong Number
+
+
+Example to check whether an integer (entered by the user) is an Armstrong number or not using while loop and if...else statement.
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+  int origNum, num, rem, sum = 0;
+  cout &lt;&lt; &quot;Enter a positive  integer: &quot;;
+  cin &gt;&gt; origNum;
+
+  num = origNum;
+
+  while(num != 0)
+  {
+      digit = num % 10;
+      sum += digit * digit * digit;
+      num /= 10;
+  }
+
+  if(sum == origNum)
+    cout &lt;&lt; origNum &lt;&lt; &quot; is an Armstrong number.&quot;;
+  else
+    cout &lt;&lt; origNum &lt;&lt; &quot; is not an Armstrong number.&quot;;
+
+  return 0;
+}
+
+
+Enter a positive integer: 371
+371 is an Armstrong number.
+
+
+
+
+====================================================================================================
+
+C++ Program to Display Armstrong Number Between Two Intervals
+
+Example to find all Armstrong numbers between two integers (entered by the user) using loops and if...else statement.
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+  int num1, num2, i, num, digit, sum;
+
+  cout &lt;&lt; &quot;Enter first number: &quot;;
+  cin &gt;&gt; num1;
+
+  cout &lt;&lt; &quot;Enter second number: &quot;;
+  cin &gt;&gt; num2;
+
+  cout &lt;&lt; &quot;Armstrong numbers between &quot; &lt;&lt; num1 &lt;&lt; &quot; and &quot; &lt;&lt; num2 &lt;&lt; &quot; are: &quot; &lt;&lt; endl;
+  for(i = num1; i &lt;= num2; i++)
+  {
+        sum = 0;
+        num = i;
+
+        for(; num &gt; 0; num /= 10)
+        {
+            digit = num % 10;
+            sum = sum + digit * digit * digit;
+        }
+
+        if(sum == i)
+        {
+            cout &lt;&lt; i &lt;&lt; endl;
+        }
+  }
+
+  return 0;
+}
+
+
+Enter first number: 100
+Enter second number: 400
+Armstrong numbers between 100 and 400 are:
+153
+370
+371
+
+
+
+====================================================================================================
+C++ Program to Display Factors of a Number
+
+
+Example to find all factors of an integer (entered by the user) using for loop and if statement.
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n, i;
+
+    cout &lt;&lt; &quot;Enter a positive integer: &quot;;
+    cin &gt;&gt; n;
+
+    cout &lt;&lt; &quot;Factors of &quot; &lt;&lt; n &lt;&lt; &quot; are: &quot; &lt;&lt; endl;  
+    for(i = 1; i &lt;= n; ++i)
+    {
+        if(n % i == 0)
+            cout &lt;&lt; i &lt;&lt; endl;
+    }
+
+    return 0;
+}
+
+
+Enter a positive integer: 60
+Factors of 60 are: 1 2 3 4 5 6 12 15 20 30 60
+
+
+
+
+
+====================================================================================================
+Programs to print triangles using *, numbers and characters
+
+This programs shows how to print triangles using *, numbers and characters
+
+
+Example 1: Program to print half pyramid using *
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = 1; i &lt;= rows; ++i)
+    {
+        for(int j = 1; j &lt;= i; ++j)
+        {
+            cout &lt;&lt; &quot;* &quot;;
+        }
+        cout &lt;&lt; &quot;n&quot;;
+    }
+    return 0;
+}
+
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+
+Example 2: Program to print half pyramid a using numbers
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = 1; i &lt;= rows; ++i)
+    {
+        for(int j = 1; j &lt;= i; ++j)
+        {
+            cout &lt;&lt; j &lt;&lt; &quot; &quot;;
+        }
+        cout &lt;&lt; &quot;n&quot;;
+    }
+    return 0;
+}
+
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+
+Example 3: Program to print half pyramid using alphabets
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    char input, alphabet = 'A';
+
+    cout &lt;&lt; &quot;Enter the uppercase character you want to print in the last row: &quot;;
+    cin &gt;&gt; input;
+
+    for(int i = 1; i &lt;= (input-'A'+1); ++i)
+    {
+        for(int j = 1; j &lt;= i; ++j)
+        {
+            cout &lt;&lt; alphabet &lt;&lt; &quot; &quot;;
+        }
+        ++alphabet;
+
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}
+
+A
+B B
+C C C
+D D D D
+E E E E E
+
+
+Programs to print inverted half pyramid using * and numbers
+
+
+Example 4: Inverted half pyramid using *
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = rows; i &gt;= 1; --i)
+    {
+        for(int j = 1; j &lt;= i; ++j)
+        {
+            cout &lt;&lt; &quot;* &quot;;
+        }
+        cout &lt;&lt; endl;
+    }
+    
+    return 0;
+}
+
+* * * * *
+* * * *
+* * * 
+* *
+*
+
+
+Example 5: Inverted half pyramid using numbers
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = rows; i &gt;= 1; --i)
+    {
+        for(int j = 1; j &lt;= i; ++j)
+        {
+            cout &lt;&lt; j &lt;&lt; &quot; &quot;;
+        }
+        cout &lt;&lt; endl;
+    }
+
+    return 0;
+}
+
+
+1 2 3 4 5
+1 2 3 4 
+1 2 3
+1 2
+1
+
+
+
+Programs to display pyramid and inverted pyramid using * and digits
+Example 6: Program to print full pyramid using *
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int space, rows;
+
+    cout &lt;&lt;&quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = 1, k = 0; i &lt;= rows; ++i, k = 0)
+    {
+        for(space = 1; space &lt;= rows-i; ++space)
+        {
+            cout &lt;&lt;&quot;  &quot;;
+        }
+
+        while(k != 2*i-1)
+        {
+            cout &lt;&lt; &quot;* &quot;;
+            ++k;
+        }
+        cout &lt;&lt; endl;
+    }    
+    return 0;
+}
+
+
+        *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
+
+
+Example 7: Program to print pyramid using numbers
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows, count = 0, count1 = 0, k = 0;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = 1; i &lt;= rows; ++i)
+    {
+        for(int space = 1; space &lt;= rows-i; ++space)
+        {
+            cout &lt;&lt; &quot;  &quot;;
+            ++count;
+        }
+
+        while(k != 2*i-1)
+        {
+            if (count &lt;= rows-1)
+            {
+                cout &lt;&lt; i+k &lt;&lt; &quot; &quot;;
+                ++count;
+            }
+            else
+            {
+                ++count1;
+                cout &lt;&lt; i+k-2*count1 &lt;&lt; &quot; &quot;;
+            }
+            ++k;
+        }
+        count1 = count = k = 0;
+
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}
+
+
+        1
+      2 3 2
+    3 4 5 4 3
+  4 5 6 7 6 5 4
+5 6 7 8 9 8 7 6 5
+
+
+Example 8: Inverted full pyramid using *
+
+
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = rows; i &gt;= 1; --i)
+    {
+        for(int space = 0; space &lt; rows-i; ++space)
+            cout &lt;&lt; &quot;  &quot;;
+
+        for(int j = i; j &lt;= 2*i-1; ++j)
+            cout &lt;&lt; &quot;* &quot;;
+
+        for(int j = 0; j &lt; i-1; ++j)
+            cout &lt;&lt; &quot;* &quot;;
+
+        cout &lt;&lt; endl;
+    }
+
+    return 0;
+}
+
+
+* * * * * * * * *
+  * * * * * * *
+    * * * * *
+      * * *
+        *
+
+
+
+
+
+
+
+
+
+====================================================================================================
+C++ Program to Print Pascal's triangle
+
+This program shows how to print Pascal's triangle
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows, coef = 1;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = 0; i &lt; rows; i++)
+    {
+        for(int space = 1; space &lt;= rows-i; space++)
+            cout &lt;&lt;&quot;  &quot;;
+
+        for(int j = 0; j &lt;= i; j++)
+        {
+            if (j == 0 || i == 0)
+                coef = 1;
+            else
+                coef = coef*(i-j+1)/j;
+
+            cout &lt;&lt; coef &lt;&lt; &quot;   &quot;;
+        }
+        cout &lt;&lt; endl;
+    }
+
+    return 0;
+}
+
+
+
+           1
+         1   1
+       1   2   1
+     1   3   3    1
+   1  4    6   4   1
+ 1  5   10   10  5   1 
+
+
+
+====================================================================================================
+C++ Program to Print Floyd's Triangle.
+This program shows how to print Floyd's triangle
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int rows, number = 1;
+
+    cout &lt;&lt; &quot;Enter number of rows: &quot;;
+    cin &gt;&gt; rows;
+
+    for(int i = 1; i &lt;= rows; i++)
+    {
+        for(int j = 1; j &lt;= i; ++j)
+        {
+            cout &lt;&lt; number &lt;&lt; &quot; &quot;;
+            ++number;
+        }
+
+        cout &lt;&lt; endl;
+    }
+
+    return 0;
+}
+
+
+
+1
+2 3
+4 5 6
+7 8 9 10
+
+
+
+
+====================================================================================================
+C++ Program to Make a Simple Calculator to Add, Subtract, Multiply or Divide Using switch...case
+
+
+Example to create a simple calculator to add, subtract, multiply and divide using switch and break statement.
+
+
+
+
+Enter operator either + or - or * or divide : -
+Enter two operands: 
+3.4
+8.4
+3.4 - 8.4 = -5.0
+
+
+====================================================================================================
+====================================================================================================
+
+====================================================================================================
+====================================================================================================
+====================================================================================================
+
+====================================================================================================
+====================================================================================================
+
+====================================================================================================
+

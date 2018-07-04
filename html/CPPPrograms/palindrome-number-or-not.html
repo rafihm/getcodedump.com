@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Get Code Dump</title>
+  <meta name="description" content="Collecton of huge amount of sample program for wide range of Programming languages">
+  <meta name="keywords" content="C, C++, Java, Python, Shell, PHP, C#, HTML,CSS,XML,JavaScript">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121314542-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121314542-1');
+      </script>
+
+      <link rel="shortcut icon" href="/logo-top.png" type="image/x-icon" />
+      <link rel="stylesheet" type="text/css" href="/CPPPrograms/CPPCodePage.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid" id="headerSection">
+            <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+            <script type="text/javascript">
+               $(document).ready(function(){
+                   $('#headerSection').load('/in-headerSection.html');
+               });
+            </script>  
+         </div>
+      </nav>
+      <div class="container-fluid">
+         <div class="row content" id=rowContent>
+            <div class="col-sm-2 sidenav" id = "CPPcodeListLeftColumn">
+               <p class="lead" align="center"> C++ Program List </p>
+               <div id="codeListLeftColumn">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#codeListLeftColumn').load('/CPPPrograms/in-programList.html #justProgramList');
+                  });
+               </script>  
+            </div>
+            </div>
+            <div class="col-sm-8" id = codeSection>
+               <div >
+                  <p style="word-wrap: break-word;" id="description">
+<p id="codeHeading">C++ Program to Check Whether a Number is Palindrome or Not
+
+</p>
+<div><p id="codeDescription">Check whether given number is palindrome or not
+</p></div>
+</br><pre id="code">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+     int n, num, digit, rev = 0;
+
+     cout &lt;&lt; &quot;Enter a positive number: &quot;;
+     cin &gt;&gt; num;
+
+     n = num;
+
+     do
+     {
+         digit = num % 10;
+         rev = (rev * 10) + digit;
+         num = num / 10;
+     } while (num != 0);
+
+     cout &lt;&lt; &quot; The reverse of the number is: &quot; &lt;&lt; rev &lt;&lt; endl;
+
+     if (n == rev)
+         cout &lt;&lt; &quot; The number is a palindrome&quot;;
+     else
+         cout &lt;&lt; &quot; The number is not a palindrome&quot;;
+
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">Enter a positive number: 12321
+The reverse of the number is: 12321
+The number is a palindrome
+
+Enter a positive number: 12331
+The reverse of the number is: 13321
+The number is not a palindrome
+</pre></br>
+                  </p>
+               </div>
+               <hr>
+            </div>
+            <div class="col-sm-2 sidenav" id="rightColumn" style="overflow-y: scroll; height: calc(90vh - 15px);">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#rightColumn').load('/in-rightColumn.html');
+                  });
+               </script>  
+            </div>
+         </div>
+      </div>
+      <footer class="container-fluid text-center" id="footerSection">
+         <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+         <script type="text/javascript">
+            $(document).ready(function(){
+                $('#footerSection').load('/in-footerSection.html');
+            });
+         </script> 
+      </footer>
+   </body>
+</html>

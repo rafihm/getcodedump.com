@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Get Code Dump</title>
+  <meta name="description" content="Collecton of huge amount of sample program for wide range of Programming languages">
+  <meta name="keywords" content="C, C++, Java, Python, Shell, PHP, C#, HTML,CSS,XML,JavaScript">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121314542-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121314542-1');
+      </script>
+
+      <link rel="shortcut icon" href="/logo-top.png" type="image/x-icon" />
+      <link rel="stylesheet" type="text/css" href="/CPrograms/CCodePage.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid" id="headerSection">
+            <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+            <script type="text/javascript">
+               $(document).ready(function(){
+                   $('#headerSection').load('/in-headerSection.html');
+               });
+            </script>  
+         </div>
+      </nav>
+      <div class="container-fluid">
+         <div class="row content" id=rowContent>
+            <div class="col-sm-2 sidenav" id = "ccodeListLeftColumn">
+               <p class="lead" align="center"> C Program List </p>
+               <div id="codeListLeftColumn">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#codeListLeftColumn').load('/CPrograms/in-programList.html #justProgramList');
+                  });
+               </script>  
+            </div>
+            </div>
+            <div class="col-sm-8" id = codeSection>
+               <div >
+                  <p style="word-wrap: break-word;" id="description">
+<p id="codeHeading">C Programming Code To Create Pyramid and Pattern
+</p>
+<div><p id="codeDescription">Examples to print half pyramid, pyramid, inverted pyramid, with numbers and * in C Programming using control statements.
+</p></div>
+</br></br><div><p id="codeDescription">
+Examples 1: Program to print half pyramid using *
+</p></div>
+<pre id="code">#include &lt;stdio.h&gt;
+int main()
+{
+    int i, j, rows;
+
+    printf(&quot;Enter number of rows: &quot;);
+    scanf(&quot;%d&quot;,&amp;rows);
+
+    for(i=1; i&lt;=rows; ++i)
+    {
+        for(j=1; j&lt;=i; ++j)
+        {
+            printf(&quot;* &quot;);
+        }
+        printf(&quot;n&quot;);
+    }
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">*
+* *
+* * *
+* * * *
+* * * * *
+</pre>
+</br></br><div><p id="codeDescription">Example 2: Program to print half pyramid a using numbers
+</p></div>
+<pre id="code">#include &lt;stdio.h&gt;
+int main()
+{
+    int i, j, rows;
+
+    printf(&quot;Enter number of rows: &quot;);
+    scanf(&quot;%d&quot;,&amp;rows);
+
+    for(i=1; i&lt;=rows; ++i)
+    {
+        for(j=1; j&lt;=i; ++j)
+        {
+            printf(&quot;%d &quot;,j);
+        }
+        printf(&quot;n&quot;);
+    }
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+</pre>
+</br></br><div><p id="codeDescription">Example 3: Program to print half pyramid using alphabets
+</p></div>
+<pre id="code">#include &lt;stdio.h&gt;
+int main()
+{
+    int i, j;
+    char input, alphabet = 'A';
+
+    printf(&quot;Enter the uppercase character you want to print in last row: &quot;);
+    scanf(&quot;%c&quot;,&amp;input);
+
+    for(i=1; i &lt;= (input-'A'+1); ++i)
+    {
+        for(j=1;j&lt;=i;++j)
+        {
+            printf(&quot;%c&quot;, alphabet);
+        }
+        ++alphabet;
+
+        printf(&quot;n&quot;);
+    }
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">A
+B B
+C C C
+D D D D
+E E E E E
+</pre>
+</br></br><div><p id="codeDescription">Example 4: Inverted half pyramid using *
+</p></div>
+<pre id="code">#include &lt;stdio.h&gt;
+int main()
+{
+    int i, j, rows;
+
+    printf(&quot;Enter number of rows: &quot;);
+    scanf(&quot;%d&quot;,&amp;rows);
+
+    for(i=rows; i&gt;=1; --i)
+    {
+        for(j=1; j&lt;=i; ++j)
+        {
+            printf(&quot;* &quot;);
+        }
+        printf(&quot;n&quot;);
+    }
+    
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">* * * * *
+* * * *
+* * * 
+* *
+*
+</pre>
+</br></br><div><p id="codeDescription">Example 5: Inverted half pyramid using numbers
+</p></div>
+<pre id="code">#include &lt;stdio.h&gt;
+int main()
+{
+    int i, j, rows;
+
+    printf(&quot;Enter number of rows: &quot;);
+    scanf(&quot;%d&quot;,&amp;rows);
+
+    for(i=rows; i&gt;=1; --i)
+    {
+        for(j=1; j&lt;=i; ++j)
+        {
+            printf(&quot;%d &quot;,j);
+        }
+        printf(&quot;n&quot;);
+    }
+
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">1 2 3 4 5
+1 2 3 4 
+1 2 3
+1 2
+1
+</pre>
+</br></br><div><p id="codeDescription">Example 6: Program to print full pyramid using *
+</p></div>
+<pre id="code">#include &lt;stdio.h&gt;
+int main()
+{
+    int i, space, rows, k=0;
+
+    printf(&quot;Enter number of rows: &quot;);
+    scanf(&quot;%d&quot;,&amp;rows);
+
+    for(i=1; i&lt;=rows; ++i, k=0)
+    {
+        for(space=1; space&lt;=rows-i; ++space)
+        {
+            printf(&quot;  &quot;);
+        }
+
+        while(k != 2*i-1)
+        {
+            printf(&quot;* &quot;);
+            ++k;
+        }
+
+        printf(&quot;n&quot;);
+    }
+    
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">        *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
+</pre>
+</br></br><div><p id="codeDescription">Example 7: Program to print pyramid using numbers
+</p></div>
+<pre id="code">#include &lt;stdio.h&gt;
+int main()
+{
+    int i, space, rows, k=0, count = 0, count1 = 0;
+
+    printf(&quot;Enter number of rows: &quot;);
+    scanf(&quot;%d&quot;,&amp;rows);
+
+    for(i=1; i&lt;=rows; ++i)
+    {
+        for(space=1; space &lt;= rows-i; ++space)
+        {
+            printf(&quot;  &quot;);
+            ++count;
+        }
+
+        while(k != 2*i-1)
+        {
+            if (count &lt;= rows-1)
+            {
+                printf(&quot;%d &quot;, i+k);
+                ++count;
+            }
+            else
+            {
+                ++count1;
+                printf(&quot;%d &quot;, (i+k-2*count1));
+            }
+            ++k;
+        }
+        count1 = count = k = 0;
+
+        printf(&quot;n&quot;);
+    }
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">        1
+      2 3 2
+    3 4 5 4 3
+  4 5 6 7 6 5 4
+5 6 7 8 9 8 7 6 5
+</pre>
+</br></br><div><p id="codeDescription">Example 8: Inverted full pyramid using *
+</p></div>
+<pre id="code">#include&lt;stdio.h&gt;
+int main()
+{
+    int rows, i, j, space;
+
+    printf(&quot;Enter number of rows: &quot;);
+    scanf(&quot;%d&quot;,&amp;rows);
+
+    for(i=rows; i&gt;=1; --i)
+    {
+        for(space=0; space &lt; rows-i; ++space)
+            printf(&quot;  &quot;);
+
+        for(j=i; j &lt;= 2*i-1; ++j)
+            printf(&quot;* &quot;);
+
+        for(j=0; j &lt; i-1; ++j)
+            printf(&quot;* &quot;);
+
+        printf(&quot;n&quot;);
+    }
+
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">* * * * * * * * *
+  * * * * * * *
+    * * * * *
+      * * *
+        *
+</pre>
+                  </p>
+               </div>
+               <hr>
+            </div>
+            <div class="col-sm-2 sidenav" id="rightColumn" style="overflow-y: scroll; height: calc(90vh - 15px);">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#rightColumn').load('/in-rightColumn.html');
+                  });
+               </script>  
+            </div>
+         </div>
+      </div>
+      <footer class="container-fluid text-center" id="footerSection">
+         <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+         <script type="text/javascript">
+            $(document).ready(function(){
+                $('#footerSection').load('/in-footerSection.html');
+            });
+         </script> 
+      </footer>
+   </body>
+</html>

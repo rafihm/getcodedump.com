@@ -1,0 +1,109 @@
+
+         /* Remove the navbar's default margin-bottom and rounded borders */ 
+         .navbar {
+         margin-bottom: 0;
+         border-radius: 0;
+         }
+         /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+         .row.content {height: 450px}
+         /* Set gray background color and 100% height */
+         .sidenav {
+         padding-top: 20px;
+         background-color: #f6f9fa;
+         height: 100%;
+         }
+         /* Set black background color, white text and some padding */
+         footer {
+         background-color: #555;
+         color: white;
+         padding: 15px;
+         }
+         /* On small screens, set height to 'auto' for sidenav and grid */
+         @media screen and (max-width: 767px) {
+         .sidenav {
+         height: auto;
+         padding: 15px;
+         }
+         .row.content {height:auto;} 
+         }
+         .panel-body  {
+         word-break:break-all;
+         word-wrap: break-word;
+         }
+         /*<!-- css to change the order of display when screen size change (usefull in mobile dispalys) -->*/
+         @media screen and (max-width:600px){
+         #rowContent{
+         display:flex;
+         flex-flow: column;
+         }
+         #codeSection{order:1;}
+         #ccodeListLeftColumn{order:2;}
+         #rightColumn{order:3;}
+         }
+         /* image size*/
+         #logo img
+         {
+         max-width:100%; 
+         max-height:100%;
+         margin:auto;
+         display:block;
+         }
+         #output{
+            background-color: #d3efce;
+         } 
+         #code{
+            background-color: #dbeffc;
+
+         }
+         #codeDescription{
+                font-size: 16px;
+                font-weight: 400;
+                font-family: 'Open Sans',sans-serif;
+                color: #252830;
+                line-height: 1.5;
+                word-spacing: 2px;
+
+         }
+         #codeHeading{
+          margin-bottom: 0.3em;
+          font-size: 2.2em;
+          font-family: Arial,Tahoma,"Trebuchet MS",'Open Sans';
+          font-weight: normal;
+          margin-top: 12px;
+          line-height: 1.05;
+          display: flex;
+          border-radius: 8px 8px 0 0;
+          border-bottom: 1px solid #EEE;
+          padding: 0 10px 10px;
+          letter-spacing: -0.5px;
+         }
+         #CSideHeading{
+          margin-bottom: 0.3em;
+          font-size: 1.5em;
+          text-align: center;
+          font-family: Arial,Tahoma,"Trebuchet MS",'Open Sans';
+          font-weight: normal;
+          margin-top: 12px;
+          line-height: 1.05;
+          display: flex;
+          border-radius: 8px 8px 0 0;
+          border-bottom: 1px solid #EEE;
+          padding: 0 10px 10px;
+          letter-spacing: -0.5px;
+         }
+         /* to make the code section scrollable */
+         #codeSection{
+          height: calc(90vh - 15px);
+          margin-bottom: 30px;
+          overflow:scroll;
+          -webkit-overflow-scrolling:
+          touch;"
+         }
+         #codeListLeftColumn{
+          overflow-y: scroll; 
+          height: calc(80vh - 15px);"
+         }
+         #CPPcodeListLeftColumn{
+          height: calc(90vh - 15px);
+          margin-bottom: 30px;
+        }

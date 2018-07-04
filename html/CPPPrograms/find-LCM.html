@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Get Code Dump</title>
+  <meta name="description" content="Collecton of huge amount of sample program for wide range of Programming languages">
+  <meta name="keywords" content="C, C++, Java, Python, Shell, PHP, C#, HTML,CSS,XML,JavaScript">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121314542-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121314542-1');
+      </script>
+
+      <link rel="shortcut icon" href="/logo-top.png" type="image/x-icon" />
+      <link rel="stylesheet" type="text/css" href="/CPPPrograms/CPPCodePage.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid" id="headerSection">
+            <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+            <script type="text/javascript">
+               $(document).ready(function(){
+                   $('#headerSection').load('/in-headerSection.html');
+               });
+            </script>  
+         </div>
+      </nav>
+      <div class="container-fluid">
+         <div class="row content" id=rowContent>
+            <div class="col-sm-2 sidenav" id = "CPPcodeListLeftColumn">
+               <p class="lead" align="center"> C++ Program List </p>
+               <div id="codeListLeftColumn">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#codeListLeftColumn').load('/CPPPrograms/in-programList.html #justProgramList');
+                  });
+               </script>  
+            </div>
+            </div>
+            <div class="col-sm-8" id = codeSection>
+               <div >
+                  <p style="word-wrap: break-word;" id="description">
+<p id="codeHeading">C++ Program to Find LCM
+</p>
+<div><p id="codeDescription">Examples on different ways to calculate the LCM (Lowest Common Multiple) of two integers using loops and decision making statements.
+</p></div>
+</br></br><div><p id="codeDescription">Example 1: Find LCM
+</p></div>
+<pre id="code">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n1, n2, max;
+
+    cout &lt;&lt; &quot;Enter two numbers: &quot;;
+    cin &gt;&gt; n1 &gt;&gt; n2;
+    
+    // maximum value between n1 and n2 is stored in max
+    max = (n1 &gt; n2) ? n1 : n2;
+
+    do
+    {
+        if (max % n1 == 0 &amp;&amp; max % n2 == 0)
+        {
+            cout &lt;&lt; &quot;LCM = &quot; &lt;&lt; max;
+            break;
+        }
+        else
+            ++max;
+    } while (true);
+    
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">Enter two numbers: 12
+18
+LCM = 36
+</pre>
+</br></br><div><p id="codeDescription">Example 2: Find LCM using HCF
+</p></div>
+<pre id="code">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n1, n2, hcf, temp, lcm;
+
+    cout &lt;&lt; &quot;Enter two numbers: &quot;;
+    cin &gt;&gt; n1 &gt;&gt; n2;
+
+    hcf = n1;
+    temp = n2;
+    
+    while(hcf != temp)
+    {
+        if(hcf &gt; temp)
+            hcf -= temp;
+        else
+            temp -= hcf;
+    }
+
+    lcm = (n1 * n2) / hcf;
+
+    cout &lt;&lt; &quot;LCM = &quot; &lt;&lt; lcm;
+    return 0;
+}
+
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">
+Enter two numbers: 12
+18
+LCM = 36
+</pre>
+                  </p>
+               </div>
+               <hr>
+            </div>
+            <div class="col-sm-2 sidenav" id="rightColumn" style="overflow-y: scroll; height: calc(90vh - 15px);">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#rightColumn').load('/in-rightColumn.html');
+                  });
+               </script>  
+            </div>
+         </div>
+      </div>
+      <footer class="container-fluid text-center" id="footerSection">
+         <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+         <script type="text/javascript">
+            $(document).ready(function(){
+                $('#footerSection').load('/in-footerSection.html');
+            });
+         </script> 
+      </footer>
+   </body>
+</html>

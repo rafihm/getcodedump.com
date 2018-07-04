@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Get Code Dump</title>
+  <meta name="description" content="Collecton of huge amount of sample program for wide range of Programming languages">
+  <meta name="keywords" content="C, C++, Java, Python, Shell, PHP, C#, HTML,CSS,XML,JavaScript">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121314542-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121314542-1');
+      </script>
+
+      <link rel="shortcut icon" href="/logo-top.png" type="image/x-icon" />
+      <link rel="stylesheet" type="text/css" href="/CPrograms/CCodePage.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid" id="headerSection">
+            <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+            <script type="text/javascript">
+               $(document).ready(function(){
+                   $('#headerSection').load('/in-headerSection.html');
+               });
+            </script>  
+         </div>
+      </nav>
+      <div class="container-fluid">
+         <div class="row content" id=rowContent>
+            <div class="col-sm-2 sidenav" id = "ccodeListLeftColumn">
+               <p class="lead" align="center"> C Program List </p>
+               <div id="codeListLeftColumn">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#codeListLeftColumn').load('/CPrograms/in-programList.html #justProgramList');
+                  });
+               </script>  
+            </div>
+            </div>
+            <div class="col-sm-8" id = codeSection>
+               <div >
+                  <p style="word-wrap: break-word;" id="description">
+<p id="codeHeading">C Program to Add Two Matrix Using Multi-dimensional Arrays.
+
+</p>
+<div><p id="codeDescription">This program takes two matrices of order r*c and stores it in two-dimensional array. Then, the program adds these two matrices and displays it on the screen.
+
+</p></div>
+</br><pre id="code">#include &lt;stdio.h&gt;
+int main(){
+    int r, c, a[100][100], b[100][100], sum[100][100], i, j;
+
+    printf(&quot;Enter number of rows (between 1 and 100): &quot;);
+    scanf(&quot;%d&quot;, &amp;r);
+    printf(&quot;Enter number of columns (between 1 and 100): &quot;);
+    scanf(&quot;%d&quot;, &amp;c);
+
+    printf(&quot;nEnter elements of 1st matrix:n&quot;);
+
+    for(i=0; i&lt;r; ++i)
+        for(j=0; j&lt;c; ++j)
+        {
+            printf(&quot;Enter element a%d%d: &quot;,i+1,j+1);
+            scanf(&quot;%d&quot;,&amp;a[i][j]);
+        }
+
+    printf(&quot;Enter elements of 2nd matrix:n&quot;);
+    for(i=0; i&lt;r; ++i)
+        for(j=0; j&lt;c; ++j)
+        {
+            printf(&quot;Enter element a%d%d: &quot;,i+1, j+1);
+            scanf(&quot;%d&quot;, &amp;b[i][j]);
+        }
+
+    // Adding Two matrices
+
+    for(i=0;i&lt;r;++i)
+        for(j=0;j&lt;c;++j)
+        {
+            sum[i][j]=a[i][j]+b[i][j];
+        }
+
+    // Displaying the result
+    printf(&quot;nSum of two matrix is: nn&quot;);
+
+    for(i=0;i&lt;r;++i)
+        for(j=0;j&lt;c;++j)
+        {
+
+            printf(&quot;%d   &quot;,sum[i][j]);
+
+            if(j==c-1)
+            {
+                printf(&quot;nn&quot;);
+            }
+        }
+    
+    return 0;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">Enter number of rows (between 1 and 100): 2
+Enter number of columns (between 1 and 100): 3
+
+Enter elements of 1st matrix:
+Enter element a11: 2
+Enter element a12: 3
+Enter element a13: 4
+Enter element a21: 5
+Enter element a22: 2
+Enter element a23: 3
+Enter elements of 2nd matrix:
+Enter element a11: -4
+Enter element a12: 5
+Enter element a13: 3
+Enter element a21: 5
+Enter element a22: 6
+Enter element a23: 3
+
+Sum of two matrix is: 
+
+-2   8   7   
+
+10   8   6  
+</pre></br>
+                  </p>
+               </div>
+               <hr>
+            </div>
+            <div class="col-sm-2 sidenav" id="rightColumn" style="overflow-y: scroll; height: calc(90vh - 15px);">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#rightColumn').load('/in-rightColumn.html');
+                  });
+               </script>  
+            </div>
+         </div>
+      </div>
+      <footer class="container-fluid text-center" id="footerSection">
+         <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+         <script type="text/javascript">
+            $(document).ready(function(){
+                $('#footerSection').load('/in-footerSection.html');
+            });
+         </script> 
+      </footer>
+   </body>
+</html>

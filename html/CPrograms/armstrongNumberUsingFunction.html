@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Get Code Dump</title>
+  <meta name="description" content="Collecton of huge amount of sample program for wide range of Programming languages">
+  <meta name="keywords" content="C, C++, Java, Python, Shell, PHP, C#, HTML,CSS,XML,JavaScript">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121314542-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121314542-1');
+      </script>
+
+      <link rel="shortcut icon" href="/logo-top.png" type="image/x-icon" />
+      <link rel="stylesheet" type="text/css" href="/CPrograms/CCodePage.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid" id="headerSection">
+            <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+            <script type="text/javascript">
+               $(document).ready(function(){
+                   $('#headerSection').load('/in-headerSection.html');
+               });
+            </script>  
+         </div>
+      </nav>
+      <div class="container-fluid">
+         <div class="row content" id=rowContent>
+            <div class="col-sm-2 sidenav" id = "ccodeListLeftColumn">
+               <p class="lead" align="center"> C Program List </p>
+               <div id="codeListLeftColumn">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#codeListLeftColumn').load('/CPrograms/in-programList.html #justProgramList');
+                  });
+               </script>  
+            </div>
+            </div>
+            <div class="col-sm-8" id = codeSection>
+               <div >
+                  <p style="word-wrap: break-word;" id="description">
+<p id="codeHeading">C Program to Check Prime or Armstrong Number Using User-defined Function.
+
+</p>
+<div><p id="codeDescription">Example to check whether an integer is a prime number or an Armstrong or both by creating two separate functions.
+
+</p></div>
+</br><pre id="code">#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int checkPrimeNumber(int n);
+int checkArmstrongNumber(int n);
+
+int main()
+{
+    int n, flag;
+
+    printf(&quot;Enter a positive integer: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+
+    // Check prime number
+    flag = checkPrimeNumber(n);
+    if (flag == 1)
+        printf(&quot;%d is a prime number.n&quot;, n);
+    else
+        printf(&quot;%d is not a prime number.n&quot;, n);
+
+    // Check Armstrong number
+    flag = checkArmstrongNumber(n);
+    if (flag == 1)
+        printf(&quot;%d is an Armstrong number.&quot;, n);
+    else
+        printf(&quot;%d is not an Armstrong number.&quot;,n);
+    return 0;
+}
+
+int checkPrimeNumber(int n)
+{
+    int i, flag = 1;
+
+    for(i=2; i&lt;=n/2; ++i)
+    {
+
+    // condition for non-prime number
+        if(n%i == 0)
+        {
+            flag = 0;
+            break;
+        }
+    }
+    return flag;
+}
+
+int checkArmstrongNumber(int number)
+{
+    int originalNumber, remainder, result = 0, n = 0, flag;
+
+    originalNumber = number;
+
+    while (originalNumber != 0)
+    {
+        originalNumber /= 10;
+        ++n;
+    }
+
+    originalNumber = number;
+
+    while (originalNumber != 0)
+    {
+        remainder = originalNumber;
+        result += pow(remainder, n);
+        originalNumber /= 10;
+    }
+
+    // condition for Armstrong number
+    if(result == number)
+        flag = 1;
+    else
+        flag = 0;
+
+    return flag;
+}
+</pre>
+
+                        <!-- TO display ad in future -->
+                        <div id="ad-midContent">
+                        <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+                           <script type="text/javascript">
+                              $(document).ready(function(){
+                                  $('#ad-midContent').load('/ad-midContent.html');
+                              });
+                           </script>  
+                        </div><h5>Output:</h5>
+<pre id="output">
+Enter a positive integer: 407
+407 is not a prime number.
+407 is an Armstrong number.
+
+</pre></br>
+                  </p>
+               </div>
+               <hr>
+            </div>
+            <div class="col-sm-2 sidenav" id="rightColumn" style="overflow-y: scroll; height: calc(90vh - 15px);">
+               <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+               <script type="text/javascript">
+                  $(document).ready(function(){
+                      $('#rightColumn').load('/in-rightColumn.html');
+                  });
+               </script>  
+            </div>
+         </div>
+      </div>
+      <footer class="container-fluid text-center" id="footerSection">
+         <script type="text/javascript" src="/js/lib/jquery-1.12.4.min.js"></script>
+         <script type="text/javascript">
+            $(document).ready(function(){
+                $('#footerSection').load('/in-footerSection.html');
+            });
+         </script> 
+      </footer>
+   </body>
+</html>
