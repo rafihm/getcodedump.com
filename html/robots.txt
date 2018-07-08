@@ -1,0 +1,8 @@
+User-agent: * 
+Disallow: /in-rightColumn.html
+Disallow: /in-programLangButtonList.html
+Disallow: /in-home-headerSection.html
+Disallow: /in-headerSection.html
+Disallow: /in-footerSection.html
+Disallow: /ad-midContent.html
+
