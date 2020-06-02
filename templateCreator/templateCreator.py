@@ -1,3 +1,6 @@
+#Code to generate the html template with the program
+#this allows you to simply specify the title, description , program etc without actally having to deal with html
+
 import sys
 import os
 
